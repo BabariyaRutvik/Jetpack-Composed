@@ -5,8 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.jetpackcomposedpractice.FundamentalConcept.AccessColorResource
-import com.example.jetpackcomposedpractice.FundamentalConcept.AccessStringRes
+import com.example.jetpackcomposedpractice.CoreComportants.AnnotatingStringWithListener
+import com.example.jetpackcomposedpractice.CoreComportants.FilledButton
+import com.example.jetpackcomposedpractice.CoreComportants.PartialSelectable
+import com.example.jetpackcomposedpractice.CoreComportants.PasswordTextFiled
+import com.example.jetpackcomposedpractice.CoreComportants.TonalButton
 import com.example.jetpackcomposedpractice.ui.theme.JetpackComposedPracticeTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,8 +17,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposedPracticeTheme {
-               // AccessStringRes()
-                AccessColorResource()
+                //PasswordTextFiled()
+               // PartialSelectable()
+               // AnnotatingStringWithListener()
+                //FilledButton()
+                TonalButton()
             }
         }
     }
@@ -25,8 +31,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     JetpackComposedPracticeTheme {
-        //AccessStringRes()
-        AccessColorResource()
-
+        //PasswordTextFiled()
+        //PartialSelectable()
+        //AnnotatingStringWithListener()
+        //FilledButton()
+        TonalButton()
     }
 }
