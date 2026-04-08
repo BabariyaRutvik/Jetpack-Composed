@@ -10,6 +10,7 @@ import com.example.jetpackcomposedpractice.CoreComportants.FilledButton
 import com.example.jetpackcomposedpractice.CoreComportants.PartialSelectable
 import com.example.jetpackcomposedpractice.CoreComportants.PasswordTextFiled
 import com.example.jetpackcomposedpractice.CoreComportants.TonalButton
+import com.example.jetpackcomposedpractice.LayoutComposables.ModifierExample
 import com.example.jetpackcomposedpractice.ui.theme.JetpackComposedPracticeTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +22,8 @@ class MainActivity : ComponentActivity() {
                // PartialSelectable()
                // AnnotatingStringWithListener()
                 //FilledButton()
-                TonalButton()
+                //TonalButton()
+                ModifierExample()
             }
         }
     }
@@ -35,6 +37,7 @@ fun DefaultPreview() {
         //PartialSelectable()
         //AnnotatingStringWithListener()
         //FilledButton()
-        TonalButton()
+        //TonalButton()
+        ModifierExample()
     }
 }
