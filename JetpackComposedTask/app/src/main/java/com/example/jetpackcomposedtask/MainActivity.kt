@@ -4,14 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.jetpackcomposedtask.Task1.ButtonColor
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import com.example.jetpackcomposedtask.Task2.CustomListScreen
+import com.example.jetpackcomposedtask.Task2.LoginPage
 import com.example.jetpackcomposedtask.ui.theme.JetpackComposedTaskTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,8 +18,18 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposedTaskTheme {
+                // This state variable controls which screen is visible
+                var currentScreen by remember { mutableStateOf("login") }
 
-               ButtonColor()
+                if (currentScreen == "login") {
+                    LoginPage(onLoginSuccess = {
+                        // When login is successful, we change the state
+                        currentScreen = "custom_list"
+                    })
+                } else {
+                    // Compose automatically switches to this when currentScreen changes
+                    CustomListScreen()
+                }
             }
         }
     }
